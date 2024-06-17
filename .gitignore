@@ -1,0 +1,5 @@
+# IDE, editors
+.vscode/
+
+# temporary
+tmp/
