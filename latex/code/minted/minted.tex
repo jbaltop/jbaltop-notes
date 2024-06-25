@@ -1,0 +1,172 @@
+% Copyright 2024 Hajun Park
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%     http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+\documentclass[../../latex]{subfiles}
+
+\begin{document}
+
+\section{minted}
+
+\mintinline{latex}{\usepackage{listings}}
+
+Minted uses \href{https://pygments.org/}{Pygments} for syntax highlighting.
+
+Install \href{https://python.org/}{Python} and then Pygments.
+
+\begin{minted}{bash}
+$ pip install Pygments
+\end{minted}
+
+To use Pygments on \LaTeX, you need to pass \mintinline{bash}{-shell-escape} flag to \LaTeX.
+
+\begin{minted}{bash}
+$ lualatex -shell-escape <file>
+\end{minted}
+
+If you want to compile \LaTeX document containing minted with Visual Studio Code and
+\href{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}{LaTeX Workshop}
+Plugin, add the following to \mintinline{text}{settings.json}.
+
+\inputminted{json}{\currfiledir ex-settings.json}
+
+\subsection{Inline code}
+
+\mintinline{latex}{\mintinline{<language>}{<text>}}
+
+\subsection{Code block}
+
+For single line: \mintinline{latex}{\mint{<language>}{<text>}}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\mint{python}{
+print("Hello, world!")
+}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \mint{python}{print("Hello, world!")}
+\end{minipage}
+
+For multiple lines: \mintinline{latex}{\begin{minted} ... \end{minted}}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}[escapeinside=~~]{latex}
+\begin{minted}{python}
+def hello():
+    print("Hello, world!")
+\end{~minted~}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{python}
+def hello():
+    print("Hello, world!")
+  \end{minted}
+\end{minipage}
+
+\subsection{Input file}
+
+\mintinline{latex}{\inputminted{<language>}{<file-path>}}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\inputminted{python}{hello.py}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \inputminted{python}{\currfiledir hello.py}
+\end{minipage}
+
+\subsection{Options}
+
+\subsubsection{Setting global minted options}
+
+inline \& code blocks
+
+\begin{minted}{latex}
+\setminted{<options>}
+\setminted[<language>]{<options>}
+\end{minted}
+
+inline
+
+\begin{minted}{latex}
+\setmintedinline{<options>}
+\setmintedinline[<language]{<options>}
+\end{minted}
+
+\subsubsection{Defining shortcuts}
+
+minted environment
+
+\begin{minted}{latex}
+\newminted{<language>}{<options>} % default environment-name: <language>code
+\newminted[<environment-name>]{<language>}{<options>}
+
+\begin{<environment-name>}
+\end{<environment-name>}
+\end{minted}
+
+mint command
+
+\begin{minted}{latex}
+\newmint{<language>}{<options>} % default macro-name: <language>
+\newmint[<macro-name>]{<language>}{<options>}
+
+\<macro-name>/<text>/ % ``/'' can be replaces by any character
+\end{minted}
+
+mintinline command
+
+\begin{minted}{latex}
+\newmintinline{<language>}{<options>} % default macro-name: <language>inline
+\newmintinline[<macro-name>]{<language>}{<options>}
+
+\<macro-name>/<text>/ % ``/'' can be replaces by any character
+\end{minted}
+
+inputminted command
+
+\begin{minted}{latex}
+\newmintedfile{<language>}{<options>} % default macro-name: <language>file
+\newmintedfile[<macro-name>]{<language>}{<options>}
+
+\<macro-name>{<file-path>}
+\end{minted}
+
+\subsubsection{Available options}
+
+\begin{itemize}
+  \item autogobble (boolean): Remove gobble (leading whitespace)
+  \item breaklines (boolean): Automatically break long lines
+  \item frame (none | leftline | topline | bottomline | lines | single): Put lines around the code
+  \item linenos (boolean): Linen numbers
+  \item numbersep (dimension): Gap between numbers and start of line
+\end{itemize}
+
+\begin{minted}{latex}
+\setminted{
+  autogobble,
+  breaklines,
+  frame=single,
+  linenos,
+  numbersep=2mm,
+}
+\end{minted}
+
+\end{document}

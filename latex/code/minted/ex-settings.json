@@ -1,0 +1,41 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "lualatex",
+      "tools": [
+        "lualatex"
+      ]
+    },
+    {
+      "name": "lualatex -> bibtex -> lualatex * 2",
+      "tools": [
+        "lualatex",
+        "bibtex",
+        "lualatex",
+        "lualatex"
+      ]
+    }
+  ]
+}
