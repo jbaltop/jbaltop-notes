@@ -12,27 +12,30 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
-\usepackage{currfile} % file path
-\usepackage{hyperref} % hyperlink
-\usepackage{listings} % code
-\usepackage{minted} % code
-\usepackage[
-  skip=\baselineskip, % \parskip
-  indent=0pt % \parindent
-]{parskip}
-\usepackage{subfiles} % split files
-\usepackage{verbatim} % code
+\documentclass[../../latex]{subfiles}
 
-% minted settings
-\setminted{
-  autogobble,
-  breakanywhere,
-  breaklines,
-  frame=single,
-  linenos,
-  numbersep=2mm,
-}
+\begin{document}
 
-\title{\LaTeX}
-\author{Hajun Park}
-\date{\today}
+\section{subfiles}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{listing}[H]
+    \begin{minted}{latex}
+\usepackage{subfiles}
+
+\subfile{<subfile-path>}
+    \end{minted}
+    \caption{main file}
+  \end{listing}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{listing}[H]
+    \begin{minted}{latex}
+\documentclass[<mainfile-path>]{subfiles}
+    \end{minted}
+    \caption{sub file}
+  \end{listing}
+\end{minipage}
+
+\end{document}
