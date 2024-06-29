@@ -12,20 +12,22 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
-\documentclass{report}
-
-\input{preamble/preamble}
+\documentclass[../../latex]{subfiles}
 
 \begin{document}
 
-\maketitle
+\section{currfile}
 
-\tableofcontents
+\mintinline{latex}{\usepackage{currfile}}
 
-\subfile{code/code}
-\subfile{split-files/split-files}
-\subfile{math/math}
-\subfile{layout/layout}
-\subfile{path/path}
+Currfile provides path information for the current file.
+
+\begin{minted}{latex}
+  \currfiledir % directory with slash
+  \currfilebase % name without extension
+  \currfileext % extension without dot
+  \currfilename % base + "." + extension
+  \currfilepath % directory + name
+\end{minted}
 
 \end{document}
