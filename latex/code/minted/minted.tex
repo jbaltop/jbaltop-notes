@@ -92,6 +92,28 @@ def hello():
   \inputminted{python}{\currfiledir hello.py}
 \end{minipage}
 
+\subsection{Captions and labels}
+
+Minted provides floating listing environment to use with caption and label.
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{listing}[H]
+  \mint{python}|print("Hello, world!")|
+  \caption{Code example}
+  \label{lst:example}
+\end{listing}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{listing}[H]
+    \mint{python}|print("Hello, world!")|
+    \caption{Code example}
+    \label{lst:example}
+  \end{listing}
+\end{minipage}
+
 \subsection{Options}
 
 \subsubsection{Setting global minted options}
