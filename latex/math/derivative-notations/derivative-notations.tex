@@ -1,0 +1,153 @@
+% Copyright 2024 Hajun Park
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%     http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+\documentclass[../../latex]{subfiles}
+
+\begin{document}
+
+\section{Derivative notations}
+
+\mintinline{latex}{\usepackage{derivative}}
+
+\subsection{Ordinary derivative}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{align}
+  & \frac{df}{dx} \\
+  & \odv{f}{x} \\
+  & \odv*{f}{x}
+\end{align}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{align}
+     & \frac{df}{dx} \\
+     & \odv{f}{x}    \\
+     & \odv*{f}{x}
+  \end{align}
+\end{minipage}
+
+\subsection{Partial derivative}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{align}
+  & \frac{\partial f}{\partial x} \\
+  & \pdv{f}{x} \\
+  & \pdv*{f}{x} \\
+  & \pdv{f}!{x} \\
+  & \pdv{f}{x,y}
+  & \pdv[order={2,3}]{f}{x,y,z} \\
+\end{align}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{align}
+     & \frac{\partial f}{\partial x} \\
+     & \pdv{f}{x}                    \\
+     & \pdv*{f}{x}                   \\
+     & \pdv{f}!{x}                   \\
+     & \pdv{f}{x,y}                  \\
+     & \pdv[order={2,3}]{f}{x,y,z}
+  \end{align}
+\end{minipage}
+
+\subsection{Material derivative}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{align}
+  & \frac{Df}{Dx} \\
+  & \mdv{f}{x} \\
+  & \mdv*{f}{x}
+\end{align}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{align}
+     & \frac{Df}{Dx} \\
+     & \mdv{f}{x}    \\
+     & \mdv*{f}{x}
+  \end{align}
+\end{minipage}
+
+\subsection{Functional derivative}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{align}
+  & \frac{\delta f}{\delta x} \\
+  & \fdv{f}{x} \\
+  & \fdv*{f}{x}
+\end{align}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{align}
+     & \frac{\delta f}{\delta x} \\
+     & \fdv{f}{x}                \\
+     & \fdv*{f}{x}
+  \end{align}
+\end{minipage}
+
+\subsection{Average rate of change}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{align}
+  & \frac{\Delta f}{\Delta x} \\
+  & \adv{f}{x}
+\end{align}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{align}
+     & \frac{\Delta f}{\Delta x} \\
+     & \adv{f}{x}
+  \end{align}
+\end{minipage}
+
+\subsection{Jacobian}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{align}
+  & \frac{
+    \partial (f, g, h)
+  }{
+    \partial (x, y, z)
+  } \\
+  & \jdv{f, g, h}{x, y, z}
+\end{align}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{align}
+     & \frac{
+      \partial (f, g, h)
+    }{
+      \partial (x, y, z)
+    }                         \\
+     & \jdv{f, g, h}{x, y, z}
+  \end{align}
+\end{minipage}
+
+\end{document}

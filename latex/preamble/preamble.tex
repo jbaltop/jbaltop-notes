@@ -12,9 +12,14 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
+\usepackage{amsmath} % align
+\usepackage{bm} % bold font
+\usepackage{cancel} % \cancel, \bcancel, \xcancel, \cancelto
 \usepackage{currfile} % file path
+\usepackage{derivative} % \pdv, \odv, \mdv, \fdv, \adv, \jdv
 \usepackage{hyperref} % hyperlink
 \usepackage{listings} % code
+\usepackage{mathtools} % \mathclap
 \usepackage{minted} % code
 \usepackage[
   skip=\baselineskip, % \parskip
@@ -32,6 +37,9 @@
   linenos,
   numbersep=2mm,
 }
+
+% page breaks in align
+\allowdisplaybreaks
 
 \title{\LaTeX}
 \author{Hajun Park}

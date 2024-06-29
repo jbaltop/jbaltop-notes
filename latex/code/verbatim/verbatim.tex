@@ -52,4 +52,30 @@ def hello():
   \end{verbatim}
 \end{minipage}
 
+\subsection{Block comment}
+
+\mintinline{latex}{\begin{comment} ... \end{comment}}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+Text 1
+
+\begin{comment}
+This part will be ignored.
+\end{comment}
+
+Text 2
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  Text 1
+
+  \begin{comment}
+  This part will be ignored.
+  \end{comment}
+
+  Text 2
+\end{minipage}
+
 \end{document}

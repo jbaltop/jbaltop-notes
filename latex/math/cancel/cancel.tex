@@ -12,18 +12,34 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
-\documentclass{report}
-
-\input{preamble/preamble}
+\documentclass[../../latex]{subfiles}
 
 \begin{document}
 
-\maketitle
+\section{Cancel}
 
-\tableofcontents
+\mintinline{latex}{\usepackage{cancel}}
 
-\subfile{code/code}
-\subfile{split-files/split-files}
-\subfile{math/math}
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{align}
+  a
+  = \cancel{b}
+  + \bcancel{c}
+  + \xcancel{d}
+  + \cancelto{x}{e}
+\end{align}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{align}
+    a
+    = \cancel{b}
+    + \bcancel{c}
+    + \xcancel{d}
+    + \cancelto{x}{e}
+  \end{align}
+\end{minipage}
 
 \end{document}

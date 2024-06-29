@@ -12,18 +12,38 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
-\documentclass{report}
-
-\input{preamble/preamble}
+\documentclass[../../latex]{subfiles}
 
 \begin{document}
 
-\maketitle
+\section{Multiline equations}
 
-\tableofcontents
+\mintinline{latex}{\usepackage{amsmath}}
 
-\subfile{code/code}
-\subfile{split-files/split-files}
-\subfile{math/math}
+\begin{minted}{latex}
+  \multirow{<nrows>}{<text>}
+\end{minted}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{align}
+  \begin{split}
+    x
+    & = a \cdot b \cdot c \\
+    & + d \cdot e \cdot f
+  \end{split}
+\end{align}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{align}
+    \begin{split}
+      x
+       & = a \cdot b \cdot c \\
+       & + d \cdot e \cdot f
+    \end{split}
+  \end{align}
+\end{minipage}
 
 \end{document}
