@@ -29,7 +29,22 @@
 \usepackage{subfiles} % split files
 \usepackage{verbatim} % code
 
-% minted settings
+% amsmath
+% page breaks in align
+\allowdisplaybreaks
+
+% geometry
+\geometry{
+  paper=a4paper,
+  margin=15mm,
+}
+
+% hyperref
+\hypersetup{
+  colorlinks,
+}
+
+% minted
 \setminted{
   autogobble,
   breakanywhere,
@@ -37,15 +52,6 @@
   frame=single,
   linenos,
   numbersep=2mm,
-}
-
-% page breaks in align
-\allowdisplaybreaks
-
-% page layout
-\geometry{
-  paper=a4paper,
-  margin=15mm,
 }
 
 \title{\LaTeX}
