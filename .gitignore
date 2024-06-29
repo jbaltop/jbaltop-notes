@@ -3,3 +3,16 @@
 
 # temporary
 tmp/
+
+# latex
+## core latex auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+
+## build tool auxiliary files
+*.synctex.gz
+
+## minted
+_minted*

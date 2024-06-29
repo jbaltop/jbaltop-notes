@@ -1,0 +1,43 @@
+% Copyright 2024 Hajun Park
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%     http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+\documentclass[../../latex]{subfiles}
+
+\begin{document}
+
+\section{parskip}
+
+\mintinline{latex}{\usepackage[<options>]{parskip}}
+
+Customize indentation and margins of paragraphs.
+
+\subsection{Options}
+
+\begin{itemize}
+  \item skip: set \textbackslash parskip
+  \item tocskip: set \textbackslash parskip within \textbackslash tableofcontents
+  \item indent: set \textbackslash parindent
+  \item parfill: set \textbackslash parfillskip
+\end{itemize}
+
+\subsection{Example}
+
+\begin{minted}{latex}
+\usepackage[
+  skip=\baselineskip,
+  indent=0pt,
+]{parskip}
+\end{minted}
+
+\end{document}

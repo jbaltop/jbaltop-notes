@@ -1,0 +1,59 @@
+% Copyright 2024 Hajun Park
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%     http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+\usepackage{amsmath} % align
+\usepackage{bm} % bold font
+\usepackage{cancel} % \cancel, \bcancel, \xcancel, \cancelto
+\usepackage{currfile} % file path
+\usepackage{derivative} % \pdv, \odv, \mdv, \fdv, \adv, \jdv
+\usepackage{geometry} % layout
+\usepackage{hyperref} % hyperlink
+\usepackage{listings} % code
+\usepackage{mathtools} % \mathclap
+\usepackage{minted} % code
+\usepackage[
+  skip=\baselineskip, % \parskip
+  indent=0pt, % \parindent
+]{parskip}
+\usepackage{subfiles} % split files
+\usepackage{verbatim} % code
+
+% amsmath
+% page breaks in align
+\allowdisplaybreaks
+
+% geometry
+\geometry{
+  paper=a4paper,
+  margin=15mm,
+}
+
+% hyperref
+\hypersetup{
+  colorlinks,
+}
+
+% minted
+\setminted{
+  autogobble,
+  breakanywhere,
+  breaklines,
+  frame=single,
+  linenos,
+  numbersep=2mm,
+}
+
+\title{\LaTeX}
+\author{Hajun Park}
+\date{\today}

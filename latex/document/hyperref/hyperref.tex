@@ -1,0 +1,57 @@
+% Copyright 2024 Hajun Park
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%     http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+\documentclass[../../latex]{subfiles}
+
+\begin{document}
+
+\section{hyperref}
+
+\mintinline{latex}{\usepackage{hyperref}}
+
+\subsection{Options}
+
+\begin{minted}{latex}
+\hypersetup{<options>}
+\end{minted}
+
+\begin{itemize}
+  \item colorlinks (false): colors he text of links and anchors
+  \item linkcolor (red): normal internal links
+  \item anchorcolor (black): anchor text
+  \item citecolor (green): bibliographical citations
+  \item filecolor (cyan): local files
+  \item menucolor (red): acrobat menu items
+  \item runcolor (filecolor): run links (launch annotations)
+  \item urlcolor (magenta): URLs
+  \item allcolors
+\end{itemize}
+
+\subsection{Example}
+
+\begin{minted}{latex}
+\hypersetup{
+  colorlinks
+}
+\end{minted}
+
+\subsection{Additional user macros}
+
+\begin{minted}{latex}
+\href{URL}{text}
+\url{URL}
+\hyperref{URL}{category}{name}{text} % URL#category.name
+\end{minted}
+
+\end{document}

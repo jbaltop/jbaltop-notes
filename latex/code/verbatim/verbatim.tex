@@ -1,0 +1,81 @@
+% Copyright 2024 Hajun Park
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%     http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+\documentclass[../../latex]{subfiles}
+
+\begin{document}
+
+\section{verbatim}
+
+\subsection{Inline code}
+
+\mintinline{latex}{\verb|<text>|} (``\mintinline{latex}{|}'' can be replaced by any character except ``\mintinline{latex}{*}'')
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\verb|Hello, world!|
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \verb|Hello, world!|
+\end{minipage}
+
+\subsection{Code block}
+
+\mintinline{latex}{\begin{verbatim} ... \end{verbatim}}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+\begin{verbatim}
+def hello():
+    print("Hello, world!")
+\end{verbatim}
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  \begin{verbatim}
+def hello():
+    print("Hello, world!")
+  \end{verbatim}
+\end{minipage}
+
+\subsection{Block comment}
+
+\mintinline{latex}{\begin{comment} ... \end{comment}}
+
+\begin{minipage}{0.47 \textwidth}
+  \begin{minted}{latex}
+Text 1
+
+\begin{comment}
+This part will be ignored.
+\end{comment}
+
+Text 2
+  \end{minted}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47 \textwidth}
+  Text 1
+
+  \begin{comment}
+  This part will be ignored.
+  \end{comment}
+
+  Text 2
+\end{minipage}
+
+\end{document}

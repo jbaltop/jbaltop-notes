@@ -1,0 +1,205 @@
+% Copyright 2024 Hajun Park
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%     http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+\documentclass[../../latex]{subfiles}
+
+\begin{document}
+
+\section{Text over and under symbols}
+
+\subsection{Place text using overset \& underset}
+
+\begin{minted}{latex}
+\usepackage{amsmath} % align
+
+\begin{align}
+  a \overset{why?}{=} b \\
+  a \underset{why?}{=} b
+\end{align}
+\end{minted}
+
+\begin{align}
+  a \overset{why?}{=} b \\
+  a \underset{why?}{=} b
+\end{align}
+
+\subsection{Remove extra spaces with mathclap}
+
+\begin{minted}{latex}
+\usepackage{amsmath} % align
+\usepackage{mathtools} % mathclap
+
+\begin{align}
+  a \overset{
+    \mathclap{why?}
+  }{=} b \\
+  a \underset{
+    \mathclap{why?}
+  }{=} b
+\end{align}
+\end{minted}
+
+\begin{align}
+  a \overset{
+    \mathclap{why?}
+  }{=} b \\
+  a \underset{
+    \mathclap{why?}
+  }{=} b
+\end{align}
+
+\subsection{Multiple lines with substack}
+
+\begin{minted}{latex}
+\usepackage{amsmath} % align, substack
+\usepackage{mathtools} % mathclap
+
+\begin{align}
+  a \overset{
+    \mathclap{
+      \substack{
+  why?   \\
+        how?
+      }
+    }
+  }{=} b \\
+  a \underset{
+    \mathclap{
+      \substack{
+  why?   \\
+        how?
+      }
+    }
+  }{=} b
+\end{align}
+\end{minted}
+
+\begin{align}
+  a \overset{
+    \mathclap{
+      \substack{
+  why?   \\
+        how?
+      }
+    }
+  }{=} b \\
+  a \underset{
+    \mathclap{
+      \substack{
+  why?   \\
+        how?
+      }
+    }
+  }{=} b
+\end{align}
+
+\subsection{Place arrows}
+
+\begin{minted}{latex}
+\usepackage{amsmath} % align, substack
+\usepackage{mathtools} % mathclap
+
+\begin{align}
+  a \overset{
+    \mathclap{
+      \substack{
+  why?     \\
+  how?     \\
+        \downarrow
+      }
+    }
+  }{=} b   \\
+  a \underset{
+    \mathclap{
+      \substack{
+  \uparrow \\
+  why?     \\
+        how?
+      }
+    }
+  }{=} b
+\end{align}
+\end{minted}
+
+\begin{align}
+  a \overset{
+    \mathclap{
+      \substack{
+  why?     \\
+  how?     \\
+        \downarrow
+      }
+    }
+  }{=} b   \\
+  a \underset{
+    \mathclap{
+      \substack{
+  \uparrow \\
+  why?     \\
+        how?
+      }
+    }
+  }{=} b
+\end{align}
+
+\subsection{Use long arrows with \textbackslash big}
+
+\begin{minted}{latex}
+\usepackage{amsmath} % align, substack
+\usepackage{mathtools} % mathclap
+
+\begin{align}
+  a \overset{
+    \mathclap{
+      \substack{
+  why?     \\
+  how?     \\
+        \big \downarrow
+      }
+    }
+  }{=} b   \\
+  a \underset{
+    \mathclap{
+      \substack{
+  \big \uparrow \\
+  why?     \\
+        how?
+      }
+    }
+  }{=} b
+\end{align}
+\end{minted}
+
+\begin{align}
+  a \overset{
+    \mathclap{
+      \substack{
+  why?          \\
+  how?          \\
+        \big \downarrow
+      }
+    }
+  }{=} b        \\
+  a \underset{
+    \mathclap{
+      \substack{
+  \big \uparrow \\
+  why?          \\
+        how?
+      }
+    }
+  }{=} b
+\end{align}
+
+\end{document}
